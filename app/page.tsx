@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import LoadingContainer from "@/components/global/LoadingContainer";
 
+// https://temp-nextjs-stroe-draft-3cja.vercel.app/
 function HomePage() {
   return (
     <>

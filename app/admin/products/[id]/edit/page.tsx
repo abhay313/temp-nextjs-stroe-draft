@@ -7,9 +7,10 @@ import FormContainer from "@/components/form/FormContainer";
 import FormInput from "@/components/form/FormInput";
 import PriceInput from "@/components/form/PriceInput";
 import TextAreaInput from "@/components/form/TextAreaInput";
-import { SubmitButton } from "@/components/form/Button";
+import { SubmitButton } from "@/components/form/Buttons";
 import CheckboxInput from "@/components/form/CheckboxInput";
 import ImageInputContainer from "@/components/form/ImageInputContainer";
+
 async function EditProductPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const product = await fetchAdminProductDetails(id);
@@ -17,7 +18,7 @@ async function EditProductPage({ params }: { params: { id: string } }) {
   return (
     <section>
       <h1 className="text-2xl font-semibold mb-8 capitalize">update product</h1>
-      <div className="border p-8 rounded-md">
+      <div className="border p-8 rounded">
         <ImageInputContainer
           action={updateProductImageAction}
           name={name}
@@ -36,13 +37,7 @@ async function EditProductPage({ params }: { params: { id: string } }) {
               label="product name"
               defaultValue={name}
             />
-            <FormInput
-              type="text"
-              name="company"
-              label="company"
-              defaultValue={company}
-            />
-
+            <FormInput type="text" name="company" defaultValue={company} />
             <PriceInput defaultValue={price} />
           </div>
           <TextAreaInput
